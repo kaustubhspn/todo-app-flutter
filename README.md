@@ -8,4 +8,6 @@ While the app is already functional, there is always room for improvement. We pl
 
 Check out the web app version deployed here: https://comforting-halva-5da920.netlify.app/
 
+Android app added in repo as **app-release.apk** file
+
 Feel free to clone this repo and make your own contributions to this exciting project!
