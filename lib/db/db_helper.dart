@@ -36,7 +36,8 @@ class DBHelper {
   // Method to create tables
   Future<void> _onCreate(Database db, int version) async {
     // Create users table
-    await db.execute('CREATE TABLE $_usersTable(id INTEGER PRIMARY KEY, email TEXT, password TEXT');
+    await db.execute(
+        'CREATE TABLE $_usersTable(id INTEGER PRIMARY KEY, email TEXT, password TEXT');
     // Create tasks table
     await db.execute(
         'CREATE TABLE $_tableName(id INTEGER PRIMARY KEY,title TEXT,note TEXT,date TEXT,startTime TEXT,endTime TEXT,remind INTEGER,repeat TEXT,color INTEGER,isCompleted INTEGER);');

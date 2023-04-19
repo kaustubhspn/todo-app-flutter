@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:intl/intl.dart';
-import 'package:to_do_app_v2/controllers/task_controller.dart';
-import 'package:to_do_app_v2/models/task.dart';
-import 'package:to_do_app_v2/ui/widgets/input_field.dart';
-
+import '../../controllers/task_controller.dart';
+import '../../models/task.dart';
+import '../widgets/input_field.dart';
 import '../theme.dart';
 import '../widgets/button.dart';
 import '../reusable_widgets/app_bar.dart';
@@ -38,7 +37,7 @@ class _AddTaskPageState extends State<AddTaskPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: const GetAppBar(),
+      appBar: GetAppBar(),
       body: Container(
         padding: const EdgeInsets.symmetric(horizontal: 20.0),
         child: SingleChildScrollView(
@@ -208,13 +207,11 @@ class _AddTaskPageState extends State<AddTaskPage> {
     );
   }
 
-
   _validateDate() {
     if (_titleController.text.isNotEmpty && _noteController.text.isNotEmpty) {
       _addTaskToDb();
       Get.back();
     } else if (_titleController.text.isEmpty || _noteController.text.isEmpty) {
-
       Get.snackbar(
         'Required',
         'All fileds are required',

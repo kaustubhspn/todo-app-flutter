@@ -1,7 +1,7 @@
 import 'dart:math';
 
 /// Generates a strong password of the given length. Defaults to 8.
-String generateStrongPassword({int length=8}) {
+String generateStrongPassword({int length = 8}) {
   // Define character sets for each type of character
   const String lowercase = 'abcdefghijklmnopqrstuvwxyz';
   const String uppercase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';

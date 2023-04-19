@@ -1,7 +1,7 @@
 import 'package:get/get.dart';
-import 'package:to_do_app_v2/db/db_helper.dart';
-import 'package:to_do_app_v2/models/task.dart';
 
+import '../db/db_helper.dart';
+import '../models/task.dart';
 import '../services/notification_services.dart';
 
 class TaskController extends GetxController {

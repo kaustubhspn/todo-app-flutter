@@ -2,8 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../theme.dart';
 
-class GetAppBar extends PreferredSizeWidget {
+class GetAppBar extends StatelessWidget with PreferredSizeWidget {
   const GetAppBar({Key? key}) : super(key: key);
+
+  @override
+  Size get preferredSize => const Size.fromHeight(kToolbarHeight);
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +17,7 @@ class GetAppBar extends PreferredSizeWidget {
       ),
       elevation: 0,
       backgroundColor:
-      Get.isDarkMode ? const Color(0x00303030) : Colors.white10,
+          Get.isDarkMode ? const Color(0x00303030) : Colors.white10,
       leading: IconButton(
         onPressed: () {
           Get.back();

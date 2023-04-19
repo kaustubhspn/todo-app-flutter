@@ -4,15 +4,15 @@ import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:intl/intl.dart';
-import 'package:to_do_app_v2/models/task.dart';
-import 'package:to_do_app_v2/services/notification_services.dart';
-import 'package:to_do_app_v2/services/theme_services.dart';
-import 'package:to_do_app_v2/ui/pages/add_task_page.dart';
-import 'package:to_do_app_v2/ui/widgets/button.dart';
-import 'package:to_do_app_v2/ui/widgets/task_tile.dart';
 import '../../controllers/task_controller.dart';
+import '../../models/task.dart';
+import '../../services/notification_services.dart';
+import '../../services/theme_services.dart';
 import '../size_config.dart';
 import '../theme.dart';
+import '../widgets/button.dart';
+import '../widgets/task_tile.dart';
+import 'add_task_page.dart';
 
 class TodoActionPage extends StatefulWidget {
   const TodoActionPage({Key? key}) : super(key: key);
@@ -62,7 +62,9 @@ class _TodoActionPageState extends State<TodoActionPage> {
         onPressed: () async {
           final themeName = !Get.isDarkMode ? 'Dark Theme' : 'Light Theme';
           NotifyHelper.showNotification(
-              title: 'Theme Changed', body: 'The theme was flicked to $themeName', payload: '');
+              title: 'Theme Changed',
+              body: 'The theme was flicked to $themeName',
+              payload: '');
           ThemeServices().switchTheme();
         },
         icon: Icon(

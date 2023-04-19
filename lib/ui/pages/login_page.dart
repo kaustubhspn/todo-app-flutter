@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:to_do_app_v2/ui/pages/home_page.dart';
 import '../reusable_widgets/action_button.dart';
+import 'home_page.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -35,10 +35,12 @@ class _LoginPageState extends State<LoginPage> {
         width: MediaQuery.of(context).size.width,
         height: 80,
         child: Center(
-          child: AppActionButton(onTap: () {
-            Get.to(() => const TodoActionPage(),
-                transition: Transition.downToUp);
-          }, title: 'Continue'),
+          child: AppActionButton(
+              onTap: () {
+                Get.to(() => const TodoActionPage(),
+                    transition: Transition.downToUp);
+              },
+              title: 'Continue'),
         ),
       ),
       appBar: AppBar(

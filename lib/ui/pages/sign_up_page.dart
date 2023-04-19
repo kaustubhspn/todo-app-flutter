@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:to_do_app_v2/services/password_generator.dart';
-import 'package:to_do_app_v2/ui/pages/home_page.dart';
-import 'package:to_do_app_v2/ui/reusable_widgets/action_button.dart';
+
+import '../../services/password_generator.dart';
+import '../reusable_widgets/action_button.dart';
+import 'home_page.dart';
 
 class SignupPage extends StatefulWidget {
   const SignupPage({Key? key}) : super(key: key);

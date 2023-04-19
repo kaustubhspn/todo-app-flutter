@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/get_navigation.dart';
 import 'package:get_storage/get_storage.dart';
-import 'package:to_do_app_v2/services/notification_services.dart';
-import 'package:to_do_app_v2/ui/pages/landing_page.dart';
+import 'services/notification_services.dart';
+import 'ui/pages/landing_page.dart';
 import '../services/theme_services.dart';
 import '../ui/theme.dart';
 

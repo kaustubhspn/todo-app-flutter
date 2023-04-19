@@ -17,9 +17,10 @@ class TaskTile extends StatelessWidget {
     );
 
     // Set container width based on screen orientation.
-    final double containerWidth = SizeConfig.orientation == Orientation.landscape
-        ? SizeConfig.screenWidth / 2
-        : SizeConfig.screenWidth;
+    final double containerWidth =
+        SizeConfig.orientation == Orientation.landscape
+            ? SizeConfig.screenWidth / 2
+            : SizeConfig.screenWidth;
 
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: horizontalPadding),
